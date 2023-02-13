@@ -414,8 +414,6 @@ class FlutterInappPurchase {
           .invokeMethod('acknowledgePurchase', <String, dynamic>{
         'token': token,
       });
-
-      return result;
     } else if (_platform.isIOS || _platform.isMacOS) {
       return 'no-ops in ios';
     }
@@ -440,7 +438,6 @@ class FlutterInappPurchase {
       return await _channel.invokeMethod('consumeProduct', <String, dynamic>{
         'token': token,
       });
-      return result;
     } else if (_platform.isIOS || _platform.isMacOS) {
       return 'no-ops in ios';
     }
