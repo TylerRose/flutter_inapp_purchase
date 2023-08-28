@@ -15,7 +15,7 @@ In App Purchase plugin for flutter. This project has been forked by react-native
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'FlutterMacOS'
-  s.platform = :osx, '10.14'
+  s.platform = :osx, '10.11'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 end
 

@@ -101,7 +101,7 @@ class FlutterInappPurchase {
     if (_platform.isAndroid) {
       return (await _channel.invokeMethod<bool?>('isReady')) ?? false;
     }
-    if (_platform.isIOS) {
+    if (_platform.isIOS || _platform.isMacOS) {
       return Future.value(true);
     }
     throw PlatformException(
@@ -134,7 +134,7 @@ class FlutterInappPurchase {
   }
 
   Future<Store> getStore() async {
-    if (_platform.isIOS) {
+    if (_platform.isIOS || _platform.isMacOS) {
       return Future.value(Store.appStore);
     }
     if (_platform.isAndroid) {
